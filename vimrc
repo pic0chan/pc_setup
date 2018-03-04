@@ -50,8 +50,8 @@ call dein#add('bronson/vim-trailing-whitespace')
 " call dein#add('KohPoll/vim-less')
 
 " RubyMineのように自動保存する
-call dein#add('907th/vim-auto-save')
-let g:auto_save = 1
+" call dein#add('907th/vim-auto-save')
+" let g:auto_save = 1
 
 " 余談: neocompleteは合わなかった。ctrl+pで補完するのが便利
 
@@ -139,8 +139,9 @@ set synmaxcol=200
 
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_guide_size = 1
+let g:indent_guides_guide_size = 2
 let g:indent_guides_start_level = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#dark ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#darkgray ctermbg=4
 
 " grep検索の実行後にQuickFix Listを表示する
