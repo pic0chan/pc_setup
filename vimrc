@@ -1,13 +1,18 @@
+"""""""""""""""""
+" 準備
+" mkdir -p ~/.vim/vimbackup
+" https://github.com/Shougo/dein.vim を見て install
+"   mkdir -p ~/.vim/dein; install.sh ~/.vim/dein とした気がする
+"   install が終わったら :call dein#install() を叩いてね
+"""""""""""""""""
+
 " 挙動を vi 互換ではなく、Vim のデフォルト設定にする
 set nocompatible
 " 一旦ファイルタイプ関連を無効化する
 filetype off
 
 """"""""""""""""""""""""""""""
-" プラグインのセットアップ 
-" https://github.com/Shougo/dein.vim を見て install してね
-"   mkdir -p ~/.vim/dein; install.sh ~/.vim/dein とした気がする
-"   install が終わったら :call dein#install() を叩いてね
+" プラグインのセットアップ
 """"""""""""""""""""""""""""""
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
@@ -134,6 +139,9 @@ set synmaxcol=200
 
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#darkgray ctermbg=4
 
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
