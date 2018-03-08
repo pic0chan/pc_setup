@@ -1,18 +1,13 @@
-"""""""""""""""""
-" 準備
-" mkdir -p ~/.vim/vimbackup
-" https://github.com/Shougo/dein.vim を見て install
-"   mkdir -p ~/.vim/dein; install.sh ~/.vim/dein とした気がする
-"   install が終わったら :call dein#install() を叩いてね
-"""""""""""""""""
-
 " 挙動を vi 互換ではなく、Vim のデフォルト設定にする
 set nocompatible
 " 一旦ファイルタイプ関連を無効化する
 filetype off
 
 """"""""""""""""""""""""""""""
-" プラグインのセットアップ
+" プラグインのセットアップ 
+" https://github.com/Shougo/dein.vim を見て install してね
+"   mkdir -p ~/.vim/dein; install.sh ~/.vim/dein とした気がする
+"   install が終わったら :call dein#install() を叩いてね
 """"""""""""""""""""""""""""""
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
@@ -50,8 +45,8 @@ call dein#add('bronson/vim-trailing-whitespace')
 " call dein#add('KohPoll/vim-less')
 
 " RubyMineのように自動保存する
-" call dein#add('907th/vim-auto-save')
-" let g:auto_save = 1
+call dein#add('907th/vim-auto-save')
+let g:auto_save = 1
 
 " 余談: neocompleteは合わなかった。ctrl+pで補完するのが便利
 
@@ -97,7 +92,7 @@ set hlsearch
 " 暗い背景色に合わせた配色にする
 set background=dark
 " タブ入力を複数の空白入力に置き換える
-" set expandtab
+"set expandtab
 " 検索ワードの最初の文字を入力した時点で検索を開始する
 set incsearch
 " 保存されていないファイルがあるときでも別のファイルを開けるようにする
@@ -139,10 +134,6 @@ set synmaxcol=200
 
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_guide_size = 2
-let g:indent_guides_start_level = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#dark ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#darkgray ctermbg=4
 
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
@@ -234,7 +225,6 @@ if has("autocmd")
     \   exe "normal! g'\"" |
     \ endif
 endif
-""""""""""""""""""""""""""""""
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 filetype on
