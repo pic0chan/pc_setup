@@ -1,0 +1,21 @@
+# git 最新
+sudo yum install gcc curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-ExtUtils-MakeMaker
+GITVERSION="2.16.2" &&
+wget https://www.kernel.org/pub/software/scm/git/git-$GITVERSION.tar.gz &&
+tar -zxf git-$GITVERSION.tar.gz &&
+cd git-$GITVERSION &&
+unset GITVERSION &&
+make prefix=/usr/local all &&
+make prefix=/usr/local install &&
+git --version
+
+# vim plugin (ref: https://github.com/Shougo/dein.vim)
+git clone https://github.com/pic0chan/pc_setup.git
+cp -f pc_setup/vimrc ~/.vimrc
+rm -rf pc_setup
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+mkdir -p ~/.vim/vimbackup
+mkdir -p ~/.vim/dein
+sh installer.sh ~/.vim/dein
+vim
+  :call dein#install()
