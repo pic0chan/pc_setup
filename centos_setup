@@ -21,6 +21,7 @@ vim
   :call dein#install()
   
 # rbenv
+sudo yum install -y readline-devel
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 rbenv --version
