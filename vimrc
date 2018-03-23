@@ -79,7 +79,6 @@ set noshowmode
 set laststatus=2
 set hlsearch
 set incsearch
-<<<<<<< HEAD
 set ignorecase
 set smartcase
 set clipboard+=unnamed
@@ -134,7 +133,6 @@ augroup END
 
 " AutoPairs
 let g:AutoPairsMultilineClose=0
-=======
 " 保存されていないファイルがあるときでも別のファイルを開けるようにする
 set hidden
 " 不可視文字を表示する
@@ -213,7 +211,6 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 function! ZenkakuSpace()
     highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 endfunction
->>>>>>> a8fd60d5fa435341f2f95ee77783d4d004e346db
 
 " EasyTags
 let g:easytags_always_enabled = 0
