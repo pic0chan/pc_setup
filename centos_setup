@@ -9,17 +9,25 @@ make prefix=/usr/local all &&
 make prefix=/usr/local install &&
 git --version
 
+# http://goodbyegangster.hatenablog.com/entry/2016/12/30/142454 これも記入する
+
+# vim build (ref: http://goodbyegangster.hatenablog.com/entry/2016/12/30/142454 )
+git clone 
+git clone https://github.com/vim/vim
+cd vim
+sudo yum -y install lua-devel perl-ExtUtils-Embed ruby-devel
+sudo ./configure --prefix=/usr --enable-rubyinterp
+sudo make
+sudo make install
+
 # vim plugin (ref: https://github.com/Shougo/dein.vim)
 git clone https://github.com/pic0chan/pc_setup.git
 cp -f pc_setup/vimrc ~/.vimrc
 rm -rf pc_setup
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-mkdir -p ~/.vim/vimbackup
-mkdir -p ~/.vim/dein
-sh installer.sh ~/.vim/dein
 vim
-  :call dein#install()
-  
+  :PlugInstall
+
 # rbenv
 sudo yum install -y readline-devel
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
@@ -32,3 +40,4 @@ rbenv rehash
 rbenv versions
 rbenv global 2.0.0-p353
 ruby -v
+
