@@ -32,3 +32,5 @@ rbenv rehash
 rbenv versions
 rbenv global 2.0.0-p353
 ruby -v
+
+# http://goodbyegangster.hatenablog.com/entry/2016/12/30/142454 これも記入する
