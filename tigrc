@@ -1,0 +1,7 @@
+set main-view         = id date author commit-title:graph=yes,refs=yes
+set vertical-split    = no
+
+bind generic g move-first-line
+bind generic G move-last-line
+bind generic <Ctrl-f> scroll-page-down
+bind generic <Ctrl-b> scroll-page-up
