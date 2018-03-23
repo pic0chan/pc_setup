@@ -20,7 +20,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'EvanDotPro/nerdtree-chmod'
 Plug 'dbakker/vim-projectroot'
-Plug 'xolox/vim-easytags'
+"Plug 'xolox/vim-easytags'
 Plug 'majutsushi/tagbar'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'elzr/vim-json'
@@ -28,7 +28,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'rhysd/try-colorscheme.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 
 if v:version >= 800
 	Plug 'Valloric/YouCompleteMe', { 'do': 'YCM_CORES=1 ./install.py --clang-completer --gocode-completer --tern-completer' }
