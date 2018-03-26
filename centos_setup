@@ -12,6 +12,7 @@ git --version
 # http://goodbyegangster.hatenablog.com/entry/2016/12/30/142454 これも記入する
 
 # vim build (ref: http://goodbyegangster.hatenablog.com/entry/2016/12/30/142454 )
+# ./configure でエラーになったら > sudo yum install ncurses-devel
 git clone 
 git clone https://github.com/vim/vim
 cd vim
