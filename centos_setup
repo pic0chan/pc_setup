@@ -43,5 +43,6 @@ rbenv global 2.0.0-p353
 ruby -v
 
 # kubectl用
+# https://kubernetes.io/docs/reference/generated/kubectl/kubectl/
 sudo yum install bash-completion
 echo "source <(kubectl completion bash)" >> ~/.bashrc
