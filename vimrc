@@ -67,7 +67,7 @@ set nowrap
 set number
 set autoindent
 set list
-set listchars=tab:▸\ ,trail:-,extends:»,precedes:«,nbsp:%
+set listchars=tab:»\ ,trail:-,extends:▸,precedes:«,nbsp:%
 set display=lastline
 set showmatch
 set matchtime=1
