@@ -24,6 +24,9 @@ sudo ./configure --prefix=/usr --enable-rubyinterp --enable-pythoninterp
 sudo make
 sudo make install
 
+# PATH
+echo "\$PATH=\$PATH:/usr/local/bin/" >> ~root/.bashrc
+
 # vim plugin
 git clone https://github.com/pic0chan/pc_setup.git
 cp -f pc_setup/vimrc ~/.vimrc
