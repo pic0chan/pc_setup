@@ -30,9 +30,9 @@ Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
 "Plug 'jiangmiao/auto-pairs'
 
-if v:version >= 800
-	Plug 'Valloric/YouCompleteMe', { 'do': 'YCM_CORES=1 ./install.py --clang-completer --gocode-completer --tern-completer' }
-end
+"if v:version >= 800
+"	Plug 'Valloric/YouCompleteMe', { 'do': 'YCM_CORES=1 ./install.py --clang-completer --gocode-completer --tern-completer' }
+"end
 
 Plug 'vim-ruby/vim-ruby',                      { 'for': 'ruby' }
 Plug 'todesking/ruby_hl_lvar.vim',             { 'for': 'ruby' }
