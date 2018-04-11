@@ -24,11 +24,10 @@ sudo ./configure --prefix=/usr --enable-rubyinterp --enable-pythoninterp
 sudo make
 sudo make install
 
-# vim plugin (ref: https://github.com/Shougo/dein.vim)
+# vim plugin
 git clone https://github.com/pic0chan/pc_setup.git
 cp -f pc_setup/vimrc ~/.vimrc
 rm -rf pc_setup
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 vim
   :PlugInstall
 
