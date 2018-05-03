@@ -50,10 +50,12 @@ ruby -v
 # rbenv-gemset
 cd ~/.rbenv/plugins/
 git clone https://github.com/jf/rbenv-gemset.git
+rbenv-gemset create 2.x.x hoge
 
 # rbenv-update
 cd ~/.rbenv/plugins/
 git clone https://github.com/rkh/rbenv-update.git
+rbenv update
 
 # kubectl用
 # https://kubernetes.io/docs/reference/generated/kubectl/kubectl/
