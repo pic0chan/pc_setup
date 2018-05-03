@@ -51,6 +51,7 @@ ruby -v
 cd ~/.rbenv/plugins/
 git clone https://github.com/jf/rbenv-gemset.git
 rbenv-gemset create 2.x.x hoge
+echo "hoge" > .rbenv-gemsets
 
 # rbenv-update
 cd ~/.rbenv/plugins/
