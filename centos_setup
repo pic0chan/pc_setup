@@ -47,6 +47,14 @@ rbenv versions
 rbenv global 2.0.0-p353
 ruby -v
 
+# rbenv-gemset
+cd ~/.rbenv/plugins/
+git clone https://github.com/jf/rbenv-gemset.git
+
+# rbenv-update
+cd ~/.rbenv/plugins/
+git clone https://github.com/rkh/rbenv-update.git
+
 # kubectl用
 # https://kubernetes.io/docs/reference/generated/kubectl/kubectl/
 sudo yum install bash-completion
