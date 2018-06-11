@@ -34,6 +34,9 @@ rm -rf pc_setup
 vim
   :PlugInstall
 
+# silver searcher のインストール
+sudo yum install the_silver_searcher
+
 # rbenv
 sudo yum install -y readline-devel
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
