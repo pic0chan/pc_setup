@@ -450,6 +450,8 @@ let g:rubycomplete_include_object       = 1
 let g:rubycomplete_include_object_space = 1
 
 " Python
+"au FileType python setl smartindent sw=4 sts=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
+"au FileType python setl smartindent sw=2 sts=2 ts=2 noet cinwords=if,elif,else,for,while,try,except,finally,def,class
 au FileType python setl smartindent sw=2 sts=2 ts=2 et cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " JavaScript
@@ -493,3 +495,6 @@ au FileType liquid set sw=2 ts=2 sts=2 et
 
 " Terraform
 au FileType terraform set sw=2 ts=2 sts=2 et
+
+" Global
+set sw=4 ts=4 sts=4 noet
