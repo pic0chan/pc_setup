@@ -98,7 +98,7 @@ set tabstop=4
 set nobackup
 set visualbell t_vb=
 set completeopt=menuone
-set cursorline
+" set cursorline
 
 " disable plugins
 let g:loaded_gzip            = 1
