@@ -38,7 +38,7 @@ vim
 sudo yum install the_silver_searcher
 
 # rbenv
-sudo yum install -y readline-devel
+sudo yum install -y readline-devel bzip2
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
