@@ -74,7 +74,7 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 # https://qiita.com/okcoder/items/e91f1e339c114e0be129
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-sudo yum install docker-ce -y 
+sudo yum install docker-ce -y
 docker -v
 sudo systemctl start docker
 sudo systemctl enable docker
@@ -88,3 +88,6 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc
 # version 確認: https://github.com/docker/compose/releases
 version="1.21.0"
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+# protoc
+sudo yum install protobuf protobuf-compiler
