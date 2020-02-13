@@ -23,7 +23,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'EvanDotPro/nerdtree-chmod'
 Plug 'itchyny/lightline.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'airblade/vim-rooter'
 
 call plug#end()
 
@@ -95,14 +94,12 @@ autocmd QuickFixCmdPost *grep* cwindow
 " NERDTree
 autocmd BufEnter * silent! lcd %:p:h
 let NERDTreeChDirMode   = 0
-"let NERDTreeHijackNetrw = 0
-let NERDTreeHijackNetrw = 1
+let NERDTreeHijackNetrw = 0
 let NERDTreeWinSize     = 40
 let NERDTreeShowHidden  = 1
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif"))"
 
 " NERDTreeTabs
-let g:nerdtree_tabs_open_on_gui_startup=0
+let g:nerdtree_tabs_open_on_gui_startup=1
 
 " Encoding
 set enc=utf-8
@@ -147,10 +144,6 @@ nnoremap <Leader>h  :noh<CR>
 nnoremap <Leader>tm :TableModeToggle<CR>
 nnoremap <C-]>      :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 vmap     <Enter>    <Plug>(EasyAlign)
-
-" vim-rooter
-let g:rooter_disable_map  = 1
-let g:rooter_silent_chdir = 1
 
 " CtrlP
 let g:ctrlp_map                 = '<Nop>'
