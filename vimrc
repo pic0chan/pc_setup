@@ -1,9 +1,9 @@
 if has('vim_starting')
-                set nocompatible
-                if !filereadable(expand("~/.vim/autoload/plug.vim"))
-                                echo "Installing vim-plug..."
-                                call system("curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim")
-                endif
+        set nocompatible
+        if !filereadable(expand("~/.vim/autoload/plug.vim"))
+                echo "Installing vim-plug..."
+                call system("curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim")
+        endif
 endif
 call plug#begin('~/.vim/plugged')
 
@@ -27,17 +27,19 @@ Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 function s:is_plugged(name)
-                if exists('g:plugs') && has_key(g:plugs, a:name) && isdirectory(g:plugs[a:name].dir)
-                                return 1
-                else
-                                return 0
-                endif
+        if exists('g:plugs') && has_key(g:plugs, a:name) && isdirectory(g:plugs[a:name].dir)
+                return 1
+        else
+                return 0
+        endif
 endfunction
 
 set nocompatible
 set nowrap
 set number
 set autoindent
+" set smartindent
+set shiftwidth=4
 set list
 set listchars=tab:»\ ,trail:-,extends:▸,precedes:«,nbsp:%
 set display=lastline
@@ -66,7 +68,6 @@ set re=0
 set lazyredraw
 set ttyfast
 set tabstop=4
-"set ambiwidth=double
 set nobackup
 set visualbell t_vb=
 set completeopt=menuone
@@ -110,9 +111,9 @@ set fencs=utf-8,iso-2022-jp,euc-jp,cp932
 set t_Co=256
 set background=dark
 if (s:is_plugged('iceberg.vim'))
-                colorscheme iceberg
-                hi NonText ctermbg=bg ctermfg=bg guibg=bg guifg=bg
-                hi EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+        colorscheme iceberg
+        hi NonText ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+        hi EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 endif
 
 " GUI
@@ -153,64 +154,61 @@ let g:ctrlp_show_hidden         = 1
 let g:ctrlp_jump_to_buffer      = 2
 let g:ctrlp_match_window        = 'bottom,order:btt,min:1,max:10'
 if executable('ag')
-                let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ".git" --ignore ".svn" --ignore ".hg" --hidden -g ""'
-                let g:ctrlp_max_depth    = 10
+        let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ".git" --ignore ".svn" --ignore ".hg" --hidden -g ""'
+        let g:ctrlp_max_depth    = 10
 else
-                let g:ctrlp_max_depth = 5
+        let g:ctrlp_max_depth = 5
 endif
 let g:ctrlp_prompt_mappings = {
-                                                \ 'PrtBS()':              ['<bs>'],
-                                                \ 'PrtDeleteWord()':      ['<del>'],
-                                                \ 'PrtCurEnd()':          ['<c-e>'],
-                                                \ 'PrtCurLeft()':         ['<c-b>'],
-                                                \ 'PrtCurRight()':        ['<c-f>'],
-                                                \ 'PrtSelectMove("j")':   ['<c-n>'],
-                                                \ 'PrtSelectMove("k")':   ['<c-p>'],
-                                                \ 'PrtHistory(-1)':       ['nop'],
-                                                \ 'PrtHistory(1)':        ['nop'],
-                                                \ 'AcceptSelection("e")': ['<cr>'],
-                                                \ 'ToggleRegex()':        ['<c-r>'],
-                                                \ 'ToggleByFname()':      ['<c-d>'],
-                                                \ 'PrtExit()':            ['<c-l>', '<esc>', '<c-c>'],
-                                                \ 'ToggleFocus()':        ['<nop>'],
-                                                \ 'PrtExpandDir()':       ['<nop>'],
-                                                \ 'AcceptSelection("h")': ['<nop>'],
-                                                \ 'AcceptSelection("t")': ['<nop>'],
-                                                \ 'AcceptSelection("v")': ['<nop>'],
-                                                \ 'ToggleType(1)':        ['<nop>'],
-                                                \ 'ToggleType(-1)':       ['<nop>'],
-                                                \ 'PrtInsert()':          ['<nop>'],
-                                                \ 'PrtCurStart()':        ['<nop>'],
-                                                \ 'PrtClearCache()':      ['<nop>'],
-                                                \ 'PrtDeleteEnt()':       ['<nop>'],
-                                                \ 'CreateNewFile()':      ['<nop>'],
-                                                \ 'MarkToOpen()':         ['<nop>'],
-                                                \ 'OpenMulti()':          ['<nop>'],
-                                                \ 'PrtDelete()':          ['<nop>'],
-                                                \ 'PrtSelectMove("t")':   ['<nop>'],
-                                                \ 'PrtSelectMove("b")':   ['<nop>'],
-                                                \ 'PrtSelectMove("u")':   ['<nop>'],
-                                                \ 'PrtSelectMove("d")':   ['<nop>'],
-                                                \ }
-
-
+        \ 'PrtBS()':              ['<bs>'],
+        \ 'PrtDeleteWord()':      ['<del>'],
+        \ 'PrtCurEnd()':          ['<c-e>'],
+        \ 'PrtCurLeft()':         ['<c-b>'],
+        \ 'PrtCurRight()':        ['<c-f>'],
+        \ 'PrtSelectMove("j")':   ['<c-n>'],
+        \ 'PrtSelectMove("k")':   ['<c-p>'],
+        \ 'PrtHistory(-1)':       ['nop'],
+        \ 'PrtHistory(1)':        ['nop'],
+        \ 'AcceptSelection("e")': ['<cr>'],
+        \ 'ToggleRegex()':        ['<c-r>'],
+        \ 'ToggleByFname()':      ['<c-d>'],
+        \ 'PrtExit()':            ['<c-l>', '<esc>', '<c-c>'],
+        \ 'ToggleFocus()':        ['<nop>'],
+        \ 'PrtExpandDir()':       ['<nop>'],
+        \ 'AcceptSelection("h")': ['<nop>'],
+        \ 'AcceptSelection("t")': ['<nop>'],
+        \ 'AcceptSelection("v")': ['<nop>'],
+        \ 'ToggleType(1)':        ['<nop>'],
+        \ 'ToggleType(-1)':       ['<nop>'],
+        \ 'PrtInsert()':          ['<nop>'],
+        \ 'PrtCurStart()':        ['<nop>'],
+        \ 'PrtClearCache()':      ['<nop>'],
+        \ 'PrtDeleteEnt()':       ['<nop>'],
+        \ 'CreateNewFile()':      ['<nop>'],
+        \ 'MarkToOpen()':         ['<nop>'],
+        \ 'OpenMulti()':          ['<nop>'],
+        \ 'PrtDelete()':          ['<nop>'],
+        \ 'PrtSelectMove("t")':   ['<nop>'],
+        \ 'PrtSelectMove("b")':   ['<nop>'],
+        \ 'PrtSelectMove("u")':   ['<nop>'],
+        \ 'PrtSelectMove("d")':   ['<nop>'],
+        \ }
 
 syntax enable
-filetype plugin indent on
 
 " delete trailing spaces
-au BufWritePre * if index(['markdown', 'diff', 'sql', 'case'], &filetype) < 0 | :%s/\s\+$//e
+" au BufWritePre * if index(['markdown', 'diff', 'sql', 'case'], &filetype) < 0 | :%s/\s\+$//e
 
 " auto read
 augroup vimrc-checktime
-		autocmd!
-		autocmd WinEnter * checktime
+        autocmd!
+        autocmd WinEnter * checktime
 augroup END
 
 " AutoPairs
 let g:AutoPairsMultilineClose=0
 
 " YouCompleteMe
-let g:ycm_min_num_of_chars_for_completion     = 1
-let g:ycm_seed_identifiers_with_syntax        = 1
-let g:ycm_collect_identifiers_from_tags_files = 0
+" let g:ycm_min_num_of_chars_for_completion     = 1
+" let g:ycm_seed_identifiers_with_syntax        = 1
+" let g:ycm_collect_identifiers_from_tags_files = 0
