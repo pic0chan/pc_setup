@@ -129,6 +129,7 @@ let NERDTreeWinSize     = 40
 let NERDTreeShowHidden  = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+"let NERDTreeQuitOnOpen  = 1
 
 " NERDTreeTabs
 let g:nerdtree_tabs_open_on_gui_startup=1
