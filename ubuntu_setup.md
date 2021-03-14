@@ -38,6 +38,17 @@ sudo make
 sudo make install
 ```
 
+### tmux
+
+```bash
+sudo apt install -y automake bison build-essential pkg-config libevent-dev libncurses5-dev
+git clone https://github.com/tmux/tmux
+cd tmux
+./autogen.sh
+./configure --prefix=/usr/local
+make && sudo make install
+```
+
 
 ### vimrc
 
