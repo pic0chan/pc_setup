@@ -7,7 +7,7 @@ sudo apt install lm-sensors
 ### kvm
 
 ```bash
-sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
+sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst
 ```
 
 
