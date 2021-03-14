@@ -56,7 +56,7 @@ sudo apt-get install ripgrep -y
 ```
 
 ### docker
-# ref https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-ja
+ref https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-ja
 
 ```bash
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
@@ -69,7 +69,7 @@ sudo usermod -aG docker ${USER}
 ```
 
 ### docker-compose
-# version 確認: https://github.com/docker/compose/releases
+version 確認: https://github.com/docker/compose/releases
 
 ```bash
 version="1.28.5"
