@@ -130,7 +130,7 @@ sudo yum install ripgrep
 
 ### tmux
 ```bash
-yum install -y automake byacc libevent
+yum install -y automake byacc libevent-devel
 git clone https://github.com/tmux/tmux
 cd tmux
 ./autogen.sh
